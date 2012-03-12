@@ -31,6 +31,9 @@
 #include <gtk/gtk.h>
 #include <libwnck/screen.h>
 
+/* Forward definition of the WnckTask class */
+typedef struct _WnckTask WnckTask;
+
 G_BEGIN_DECLS
 
 #define WNCK_TYPE_TASKLIST              (wnck_tasklist_get_type ())
@@ -130,6 +133,14 @@ void wnck_tasklist_set_icon_loader (WnckTasklist         *tasklist,
                                     WnckLoadIconFunction  load_icon_func,
                                     void                 *data,
                                     GDestroyNotify        free_data_func);
+
+//Required by WnckTask
+void     wnck_tasklist_activate_task_window     (WnckTask *task,
+                                                        guint32   timestamp);
+void     wnck_tasklist_change_active_task (WnckTasklist *tasklist,
+                                           WnckTask *active_task);
+void     wnck_tasklist_update_lists (WnckTasklist *tasklist);
+
 
 G_END_DECLS
 

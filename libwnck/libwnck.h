@@ -32,6 +32,7 @@
 #include <libwnck/screen.h>
 
 #include <libwnck/pager.h>
+#include <libwnck/task.h>
 #include <libwnck/tasklist.h>
 #include <libwnck/selector.h>
 

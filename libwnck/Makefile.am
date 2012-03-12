@@ -49,6 +49,7 @@ wnck_sources =			\
 	screen.c		\
 	selector.c		\
 	tasklist.c		\
+	task.c			\
 	util.c			\
 	window.c		\
 	window-action-menu.c	\
